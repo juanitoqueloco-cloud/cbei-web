@@ -1,36 +1,46 @@
+import {
+  Brain,
+  HeartHandshake,
+  Sprout,
+  Users,
+  ClipboardCheck,
+  Sparkles
+} from "lucide-react";
+
+
 const services = [
   {
-    icon: "🧠",
+    icon: Brain,
     title: "Psicología",
     description:
       "Servicios psicológicos profesionales enfocados en el bienestar emocional."
   },
   {
-    icon: "❤️",
+    icon: HeartHandshake,
     title: "Bienestar emocional",
     description:
       "Acompañamiento para fortalecer la salud mental y la calidad de vida."
   },
   {
-    icon: "🌱",
+    icon: Sprout,
     title: "Crecimiento personal",
     description:
       "Herramientas para desarrollar habilidades y alcanzar objetivos personales."
   },
   {
-    icon: "👥",
+    icon: Users,
     title: "Terapia familiar",
     description:
       "Espacios de apoyo para mejorar relaciones y comunicación."
   },
   {
-    icon: "📋",
+    icon: ClipboardCheck,
     title: "Evaluaciones psicológicas",
     description:
       "Evaluaciones profesionales adaptadas a tus necesidades."
   },
   {
-    icon: "✨",
+    icon: Sparkles,
     title: "Programas de bienestar",
     description:
       "Estrategias integrales para promover transformación personal."
@@ -44,6 +54,7 @@ export default function Services() {
 
       <div className="mx-auto max-w-7xl">
 
+        {/* Título */}
         <div className="text-center">
 
           <span className="rounded-full bg-[#EAF4E5] px-4 py-2 text-sm font-semibold text-[#3A6B35]">
@@ -62,35 +73,43 @@ export default function Services() {
         </div>
 
 
+        {/* Tarjetas */}
         <div className="mt-16 grid gap-8 md:grid-cols-3">
 
+          {services.map((service) => {
 
-          {services.map((service) => (
+            const Icon = service.icon;
 
-            <div
-              key={service.title}
-              className="rounded-3xl border border-slate-100 bg-white p-8 shadow-lg transition hover:-translate-y-2"
-            >
+            return (
 
-              <div className="text-5xl">
-                {service.icon}
+              <div
+                key={service.title}
+                className="rounded-3xl border border-slate-100 bg-white p-8 shadow-lg transition hover:-translate-y-2"
+              >
+
+                {/* Icono */}
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#EAF4E5] text-[#3A6B35]">
+                  <Icon size={38} strokeWidth={1.8} />
+                </div>
+
+
+                {/* Título */}
+                <h3 className="mt-6 text-2xl font-bold text-[#3A6B35]">
+                  {service.title}
+                </h3>
+
+
+                {/* Descripción */}
+                <p className="mt-4 text-slate-600">
+                  {service.description}
+                </p>
+
+
               </div>
 
+            );
 
-              <h3 className="mt-6 text-2xl font-bold text-[#3A6B35]">
-                {service.title}
-              </h3>
-
-
-              <p className="mt-4 text-slate-600">
-                {service.description}
-              </p>
-
-
-            </div>
-
-          ))}
-
+          })}
 
         </div>
 
