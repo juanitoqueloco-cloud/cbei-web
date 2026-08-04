@@ -39,7 +39,7 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/especialista"
+            href="/specialist"
             className="text-slate-600 transition hover:text-[#3A6B35]"
           >
             Especialista
