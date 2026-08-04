@@ -2,16 +2,17 @@ import {
   Phone,
   Mail,
   MapPin,
-  Clock
+  Clock,
+  Send,
 } from "lucide-react";
-
 
 export default function Contact() {
   return (
-    <section className="bg-white px-6 py-24">
-
-      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
-
+    <section
+      id="contacto"
+      className="bg-white px-6 py-24"
+    >
+      <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-2">
 
         {/* Información */}
         <div>
@@ -20,114 +21,189 @@ export default function Contact() {
             Contacto
           </span>
 
-
           <h2 className="mt-6 text-4xl font-bold text-[#3A6B35]">
             Comienza tu proceso de bienestar hoy
           </h2>
 
-
-          <p className="mt-6 text-lg text-slate-600">
+          <p className="mt-6 text-lg leading-8 text-slate-600">
             Estamos aquí para acompañarte. Comunícate con nosotros
-            y agenda tu cita.
+            y agenda tu primera cita.
           </p>
 
 
-          <div className="mt-8 space-y-5">
+          <div className="mt-10 grid gap-5">
 
+            {/* Teléfono */}
 
-            <div className="flex items-center gap-4">
-              <Phone className="text-[#3A6B35]" />
-              <span>
-                (787) 000-0000
-              </span>
+            <div className="rounded-2xl border border-slate-100 bg-white p-5 shadow-md transition hover:-translate-y-1 hover:shadow-xl">
+
+              <div className="flex items-center gap-4">
+
+                <div className="rounded-xl bg-[#EAF4E5] p-3">
+                  <Phone className="text-[#3A6B35]" />
+                </div>
+
+                <div>
+
+                  <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">
+                    Teléfono
+                  </p>
+
+                  <p className="mt-1 text-lg font-semibold text-slate-800">
+                    (787) 000-0000
+                  </p>
+
+                </div>
+
+              </div>
+
             </div>
 
 
-            <div className="flex items-center gap-4">
-              <Mail className="text-[#3A6B35]" />
-              <span>
-                info@cbeipr.com
-              </span>
+            {/* Email */}
+
+            <div className="rounded-2xl border border-slate-100 bg-white p-5 shadow-md transition hover:-translate-y-1 hover:shadow-xl">
+
+              <div className="flex items-center gap-4">
+
+                <div className="rounded-xl bg-[#EAF4E5] p-3">
+                  <Mail className="text-[#3A6B35]" />
+                </div>
+
+                <div>
+
+                  <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">
+                    Correo electrónico
+                  </p>
+
+                  <p className="mt-1 text-lg font-semibold text-slate-800">
+                    info@cbeipr.com
+                  </p>
+
+                </div>
+
+              </div>
+
             </div>
 
 
-            <div className="flex items-center gap-4">
-              <MapPin className="text-[#3A6B35]" />
-              <span>
-                Puerto Rico
-              </span>
+            {/* Dirección */}
+
+            <div className="rounded-2xl border border-slate-100 bg-white p-5 shadow-md transition hover:-translate-y-1 hover:shadow-xl">
+
+              <div className="flex items-center gap-4">
+
+                <div className="rounded-xl bg-[#EAF4E5] p-3">
+                  <MapPin className="text-[#3A6B35]" />
+                </div>
+
+                <div>
+
+                  <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">
+                    Ubicación
+                  </p>
+
+                  <p className="mt-1 text-lg font-semibold text-slate-800">
+                    Avenida Emilio Fagot 2928 STE 1
+                  </p>
+
+                  <p className="text-slate-600">
+                    Ponce, Puerto Rico 00716
+                  </p>
+
+                </div>
+
+              </div>
+
             </div>
 
 
-            <div className="flex items-center gap-4">
-              <Clock className="text-[#3A6B35]" />
-              <span>
-                Lunes - Viernes 8:00 AM - 5:00 PM
-              </span>
-            </div>
+            {/* Horario */}
 
+            <div className="rounded-2xl border border-slate-100 bg-white p-5 shadow-md transition hover:-translate-y-1 hover:shadow-xl">
+
+              <div className="flex items-center gap-4">
+
+                <div className="rounded-xl bg-[#EAF4E5] p-3">
+                  <Clock className="text-[#3A6B35]" />
+                </div>
+
+                <div>
+
+                  <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">
+                    Horario
+                  </p>
+
+                  <p className="mt-1 text-lg font-semibold text-slate-800">
+                    Lunes - Sábado
+                  </p>
+
+                  <p className="text-slate-600">
+                    8:00 AM - 5:00 PM
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
 
           </div>
 
         </div>
 
 
-
         {/* Formulario */}
-        <div className="rounded-3xl bg-[#F8FAF5] p-8 shadow-lg">
 
+        <div className="rounded-[32px] bg-[#F8FAF5] p-10 shadow-xl">
 
-          <h3 className="text-2xl font-bold text-[#3A6B35]">
-            Agendar cita
+          <h3 className="text-3xl font-bold text-[#3A6B35]">
+            Agenda tu cita
           </h3>
 
+          <p className="mt-2 text-slate-600">
+            Completa el formulario y nos comunicaremos contigo lo antes posible.
+          </p>
 
-          <form className="mt-6 space-y-4">
-
+          <form className="mt-8 space-y-5">
 
             <input
               type="text"
               placeholder="Nombre completo"
-              className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-[#3A6B35]"
+              className="w-full rounded-2xl border border-slate-300 bg-white px-5 py-4 text-slate-800 placeholder:text-slate-500 shadow-sm transition focus:border-[#3A6B35] focus:outline-none focus:ring-4 focus:ring-[#3A6B35]/10"
             />
-
 
             <input
               type="tel"
               placeholder="Teléfono"
-              className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-[#3A6B35]"
+              className="w-full rounded-2xl border border-slate-300 bg-white px-5 py-4 text-slate-800 placeholder:text-slate-500 shadow-sm transition focus:border-[#3A6B35] focus:outline-none focus:ring-4 focus:ring-[#3A6B35]/10"
             />
-
 
             <input
               type="email"
               placeholder="Correo electrónico"
-              className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-[#3A6B35]"
+              className="w-full rounded-2xl border border-slate-300 bg-white px-5 py-4 text-slate-800 placeholder:text-slate-500 shadow-sm transition focus:border-[#3A6B35] focus:outline-none focus:ring-4 focus:ring-[#3A6B35]/10"
             />
-
 
             <textarea
-              placeholder="Mensaje"
-              rows={4}
-              className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-[#3A6B35]"
+              rows={5}
+              placeholder="¿Cómo podemos ayudarte?"
+              className="w-full rounded-2xl border border-slate-300 bg-white px-5 py-4 text-slate-800 placeholder:text-slate-500 shadow-sm transition focus:border-[#3A6B35] focus:outline-none focus:ring-4 focus:ring-[#3A6B35]/10"
             />
-
 
             <button
               type="submit"
-              className="w-full rounded-full bg-[#0F4C81] py-3 font-semibold text-white transition hover:bg-[#0b3960]"
+              className="flex w-full items-center justify-center gap-2 rounded-full bg-[#0F4C81] py-4 font-semibold text-white transition hover:bg-[#0b3960]"
             >
+              <Send size={20} />
               Solicitar cita
             </button>
-
 
           </form>
 
         </div>
 
-
       </div>
-
     </section>
   );
 }
