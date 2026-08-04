@@ -58,8 +58,8 @@ export default function Services() {
         <div className="text-center">
 
           <span className="rounded-full bg-[#EAF4E5] px-4 py-2 text-sm font-semibold text-[#3A6B35]">
-            Nuestros servicios
-          </span>
+  Atención Profesional
+</span>
 
           <h2 className="mt-6 text-4xl font-bold text-[#3A6B35]">
             Cuidamos tu bienestar integral
