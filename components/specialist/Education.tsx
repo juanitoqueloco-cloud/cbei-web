@@ -5,27 +5,13 @@ import {
   BookOpen,
 } from "lucide-react";
 
-const items = [
-  {
-    icon: GraduationCap,
-    title: "Formación Académica",
-    text: "Ph.D. en Psicología Clínica con una sólida preparación orientada al bienestar emocional y la atención integral.",
-  },
-  {
-    icon: Award,
-    title: "Licencia Profesional",
-    text: "Licencia Profesional 4207, ejerciendo con responsabilidad, ética y compromiso con cada paciente.",
-  },
-  {
-    icon: BriefcaseBusiness,
-    title: "Experiencia Clínica",
-    text: "Experiencia en atención psicológica individual, familiar y procesos orientados al desarrollo personal.",
-  },
-  {
-    icon: BookOpen,
-    title: "Actualización Continua",
-    text: "Compromiso permanente con la educación continua y las mejores prácticas basadas en evidencia.",
-  },
+import { specialist } from "@/data";
+
+const icons = [
+  GraduationCap,
+  Award,
+  BriefcaseBusiness,
+  BookOpen,
 ];
 
 export default function Education() {
@@ -53,14 +39,14 @@ export default function Education() {
 
         </div>
 
+
         <div className="mt-16 grid gap-8 md:grid-cols-2">
 
-          {items.map((item) => {
+          {specialist.education.map((item, index) => {
 
-            const Icon = item.icon;
+            const Icon = icons[index];
 
             return (
-
               <div
                 key={item.title}
                 className="rounded-3xl bg-white p-8 shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
@@ -75,16 +61,17 @@ export default function Education() {
 
                 </div>
 
+
                 <h3 className="mt-6 text-2xl font-bold text-[#234B37]">
                   {item.title}
                 </h3>
+
 
                 <p className="mt-4 leading-8 text-slate-600">
                   {item.text}
                 </p>
 
               </div>
-
             );
 
           })}

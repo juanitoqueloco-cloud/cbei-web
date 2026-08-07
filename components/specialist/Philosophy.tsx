@@ -5,27 +5,13 @@ import {
   Sprout,
 } from "lucide-react";
 
-const steps = [
-  {
-    icon: MessageCircleHeart,
-    title: "1. Te escucho",
-    text: "La primera consulta es un espacio para conocernos. Podrás hablar con tranquilidad sobre aquello que te preocupa, sin presión ni juicios.",
-  },
-  {
-    icon: Search,
-    title: "2. Comprendemos tu situación",
-    text: "Exploraremos juntos tu historia, tus necesidades y los objetivos que deseas alcanzar durante el proceso terapéutico.",
-  },
-  {
-    icon: ClipboardList,
-    title: "3. Diseñamos un plan",
-    text: "Definiremos un plan de trabajo personalizado, adaptado a tus circunstancias y metas personales.",
-  },
-  {
-    icon: Sprout,
-    title: "4. Comenzamos tu proceso",
-    text: "Cada sesión buscará ayudarte a desarrollar herramientas que favorezcan tu bienestar y crecimiento personal.",
-  },
+import { specialist } from "@/data";
+
+const icons = [
+  MessageCircleHeart,
+  Search,
+  ClipboardList,
+  Sprout,
 ];
 
 export default function Philosophy() {
@@ -41,21 +27,21 @@ export default function Philosophy() {
           </span>
 
           <h2 className="mt-6 text-4xl font-bold text-[#234B37]">
-            ¿Cómo será tu primera consulta?
+            {specialist.philosophy.title}
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
-            Iniciar terapia puede generar dudas. Mi objetivo es que desde el
-            primer encuentro te sientas acompañado, escuchado y comprendido.
+            {specialist.philosophy.description}
           </p>
 
         </div>
 
+
         <div className="mt-16 grid gap-8 md:grid-cols-2">
 
-          {steps.map((step) => {
+          {specialist.philosophy.steps.map((step, index) => {
 
-            const Icon = step.icon;
+            const Icon = icons[index];
 
             return (
 
@@ -73,9 +59,11 @@ export default function Philosophy() {
 
                 </div>
 
+
                 <h3 className="mt-6 text-2xl font-bold text-[#234B37]">
                   {step.title}
                 </h3>
+
 
                 <p className="mt-4 leading-8 text-slate-600">
                   {step.text}

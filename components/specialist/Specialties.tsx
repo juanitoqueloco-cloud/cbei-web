@@ -7,43 +7,20 @@ import {
   Smile,
 } from "lucide-react";
 
-const specialties = [
-  {
-    icon: Brain,
-    title: "Ansiedad y Estrés",
-    text: "Aprende herramientas para comprender y manejar la ansiedad, el estrés y sus efectos en tu vida diaria.",
-  },
-  {
-    icon: Smile,
-    title: "Depresión",
-    text: "Recibe acompañamiento profesional para afrontar momentos difíciles y recuperar tu bienestar emocional.",
-  },
-  {
-    icon: HeartHandshake,
-    title: "Bienestar Emocional",
-    text: "Fortalece tu autoestima, desarrolla resiliencia y encuentra un mayor equilibrio emocional.",
-  },
-  {
-    icon: Users,
-    title: "Terapia Familiar",
-    text: "Mejora la comunicación, fortalece vínculos y resuelve conflictos dentro del entorno familiar.",
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Evaluaciones Psicológicas",
-    text: "Evaluaciones profesionales adaptadas a las necesidades de cada persona.",
-  },
-  {
-    icon: Sparkles,
-    title: "Crecimiento Personal",
-    text: "Desarrolla habilidades que te permitan alcanzar tus metas y mejorar tu calidad de vida.",
-  },
+import { specialist } from "@/data";
+
+const icons = [
+  Brain,
+  Smile,
+  HeartHandshake,
+  Users,
+  ClipboardCheck,
+  Sparkles,
 ];
 
 export default function Specialties() {
   return (
     <section className="bg-white px-6 py-24">
-
       <div className="mx-auto max-w-7xl">
 
         <div className="text-center">
@@ -66,12 +43,11 @@ export default function Specialties() {
 
         <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
-          {specialties.map((item) => {
+          {specialist.specialties.map((item, index) => {
 
-            const Icon = item.icon;
+            const Icon = icons[index];
 
             return (
-
               <div
                 key={item.title}
                 className="rounded-3xl border border-slate-100 bg-[#F8FAF5] p-8 shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
@@ -95,7 +71,6 @@ export default function Specialties() {
                 </p>
 
               </div>
-
             );
 
           })}
@@ -103,7 +78,6 @@ export default function Specialties() {
         </div>
 
       </div>
-
     </section>
   );
 }
