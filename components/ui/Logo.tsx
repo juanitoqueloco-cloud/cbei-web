@@ -4,11 +4,11 @@ export default function Logo() {
   return (
     <div className="flex items-center gap-5">
       <Image
-        src="/logo/logo-3.png"
+        src="/logo/logo-3-final.webp"
         alt="Centro de Bienestar Éxito e Innovación"
         width={80}
         height={80}
-        priority
+      
       />
 
       <div>

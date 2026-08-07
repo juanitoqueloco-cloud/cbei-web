@@ -18,7 +18,7 @@ export default function Footer() {
           <div className="flex items-center gap-4">
 
             <Image
-              src="/logo/logo-3.png"
+              src="/logo/logo-3-final.webp"
               alt="CBEI"
               width={125}
               height={125}
