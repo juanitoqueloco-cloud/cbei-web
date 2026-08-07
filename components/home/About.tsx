@@ -1,7 +1,9 @@
 export default function About() {
   return (
-    <section className="bg-[#F8FAF5] px-6 py-24">
-
+    <section
+      id="nosotros"
+      className="bg-[#F8FAF5] px-6 py-24"
+    >
       <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
 
         {/* Texto */}
