@@ -1,8 +1,12 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <main className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-white pt-24">
 
+
       {/* Fondo decorativo */}
+
       <div className="absolute inset-0 -z-10">
 
         <div className="absolute left-10 top-20 h-72 w-72 rounded-full bg-green-100 blur-3xl opacity-40" />
@@ -12,6 +16,9 @@ export default function Hero() {
       </div>
 
 
+
+
+
       <section className="mx-auto grid max-w-7xl items-center gap-16 px-6 py-16 lg:grid-cols-2">
 
 
@@ -19,19 +26,27 @@ export default function Hero() {
 
         <div>
 
+
           <span className="inline-block rounded-full bg-[#EAF4E5] px-4 py-2 text-sm font-semibold text-[#3A6B35]">
+
             Bienestar • Innovación • Excelencia
+
           </span>
+
+
+
 
 
           <h1 className="mt-8 text-4xl font-extrabold leading-tight text-[#3A6B35] sm:text-5xl lg:text-6xl">
 
             Tu bienestar
             <br />
-
             comienza <span className="text-[#C2185B]">aquí.</span>
 
           </h1>
+
+
+
 
 
           <p className="mt-8 max-w-xl text-lg leading-8 text-slate-600">
@@ -44,41 +59,63 @@ export default function Hero() {
 
 
 
+
+
           {/* Botones */}
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
 
 
-            <button
-              className="rounded-full bg-[#0F4C81] px-8 py-4 font-semibold text-white transition hover:scale-105 hover:bg-[#0b3960]"
+            <Link
+              href="/#contacto"
+              className="rounded-full bg-[#0F4C81] px-8 py-4 text-center font-semibold text-white transition hover:scale-105 hover:bg-[#0b3960]"
             >
+
               Agendar cita
-            </button>
+
+            </Link>
 
 
-            <button
-              className="rounded-full border-2 border-[#3A6B35] px-8 py-4 font-semibold text-[#3A6B35] transition hover:bg-[#3A6B35] hover:text-white"
+
+
+
+            <Link
+              href="/servicios"
+              className="rounded-full border-2 border-[#3A6B35] px-8 py-4 text-center font-semibold text-[#3A6B35] transition hover:bg-[#3A6B35] hover:text-white"
             >
+
               Nuestros servicios
-            </button>
+
+            </Link>
+
 
 
           </div>
+
 
 
         </div>
 
 
 
+
+
+
+
         {/* Imagen principal */}
 
+
         <div className="flex justify-center">
+
 
 
           <div className="relative flex h-[500px] w-full max-w-[420px] items-center justify-center overflow-hidden rounded-[40px] bg-gradient-to-br from-[#EAF4E5] to-[#FCE7F3] shadow-2xl">
 
 
             <div className="absolute top-16 h-28 w-28 rounded-full bg-white/60 blur-sm" />
+
+
+
 
 
             <div className="relative text-center">
@@ -92,11 +129,15 @@ export default function Hero() {
 
 
 
+
+
               <h2 className="mt-8 text-3xl font-bold text-[#3A6B35]">
 
                 Bienestar Integral
 
               </h2>
+
+
 
 
 
@@ -106,6 +147,8 @@ export default function Hero() {
                 en tu crecimiento y bienestar.
 
               </p>
+
+
 
 
 
@@ -130,16 +173,23 @@ export default function Hero() {
               </div>
 
 
+
             </div>
+
 
 
           </div>
 
 
+
         </div>
 
 
+
+
+
       </section>
+
 
 
     </main>
