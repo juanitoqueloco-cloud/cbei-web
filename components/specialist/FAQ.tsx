@@ -45,34 +45,24 @@ export default function FAQ() {
       <div className="mx-auto max-w-4xl">
 
 
-        {/* Encabezado */}
-
         <div className="text-center">
 
 
           <span className="rounded-full bg-[#EAF4E5] px-4 py-2 text-sm font-semibold text-[#3A6B35]">
-
             Preguntas frecuentes
-
           </span>
 
 
 
-
           <h2 className="mt-6 text-3xl font-bold text-[#234B37] sm:text-4xl">
-
             Resolvemos tus dudas
-
           </h2>
 
 
 
-
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
-
             Sabemos que comenzar terapia puede generar preguntas.
             Aquí encontrarás respuestas a algunas de las más frecuentes.
-
           </p>
 
 
@@ -82,14 +72,10 @@ export default function FAQ() {
 
 
 
-        {/* Preguntas */}
-
-
         <div className="mt-12 space-y-4">
 
 
           {faqs.map((faq, index) => (
-
 
             <div
               key={faq.question}
@@ -97,19 +83,19 @@ export default function FAQ() {
             >
 
 
-
               <button
+                type="button"
                 onClick={() =>
                   setOpen(open === index ? null : index)
                 }
+                aria-expanded={open === index}
+                aria-controls={`specialist-faq-answer-${index}`}
                 className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
               >
 
 
                 <span className="font-semibold text-slate-800">
-
                   {faq.question}
-
                 </span>
 
 
@@ -119,6 +105,7 @@ export default function FAQ() {
                   className={`shrink-0 transition ${
                     open === index ? "rotate-180" : ""
                   }`}
+                  aria-hidden="true"
                 />
 
 
@@ -130,20 +117,19 @@ export default function FAQ() {
 
               {open === index && (
 
-
-                <div className="border-t border-slate-100 px-6 py-5 leading-8 text-slate-600">
+                <div
+                  id={`specialist-faq-answer-${index}`}
+                  className="border-t border-slate-100 px-6 py-5 leading-8 text-slate-600"
+                >
 
                   {faq.answer}
 
                 </div>
 
-
               )}
 
 
-
             </div>
-
 
           ))}
 
