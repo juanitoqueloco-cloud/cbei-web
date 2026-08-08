@@ -28,6 +28,7 @@ export default function Footer() {
               alt="Logo Centro de Bienestar Éxito e Innovación"
               width={125}
               height={125}
+              sizes="125px"
             />
 
 
@@ -159,7 +160,9 @@ export default function Footer() {
               <Phone size={18} />
 
               <span>
-                (787) 000-0000
+                <a href="tel:+17870000000" className="transition hover:text-white">
+                  (787) 000-0000
+                </a>
               </span>
 
             </div>
@@ -172,7 +175,9 @@ export default function Footer() {
               <Mail size={18} />
 
               <span>
-                info@cbeipr.com
+                <a href="mailto:info@cbeipr.com" className="transition hover:text-white">
+                  info@cbeipr.com
+                </a>
               </span>
 
             </div>

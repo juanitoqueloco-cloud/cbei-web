@@ -2,22 +2,26 @@ export default function StructuredData() {
   const data = {
     "@context": "https://schema.org",
 
-    "@type": [
-      "ProfessionalService",
-      "LocalBusiness",
-    ],
+    "@type": "ProfessionalService",
 
+    additionalType:
+      "https://schema.org/MedicalBusiness",
 
     name:
       "Centro de Bienestar Éxito e Innovación",
 
-
     url:
       "https://www.cbeipr.com",
 
-
     image:
       "https://www.cbeipr.com/logo/logo-3-final.webp",
+
+    logo: {
+      "@type": "ImageObject",
+
+      url:
+        "https://www.cbeipr.com/logo/logo-3-final.webp",
+    },
 
 
     description:
@@ -27,7 +31,17 @@ export default function StructuredData() {
 
     areaServed: {
       "@type": "AdministrativeArea",
-      name: "Puerto Rico",
+
+      name:
+        "Puerto Rico",
+    },
+
+
+    serviceArea: {
+      "@type": "AdministrativeArea",
+
+      name:
+        "Puerto Rico",
     },
 
 
@@ -37,10 +51,7 @@ export default function StructuredData() {
 
 
 
-
-
     founder: {
-
       "@type": "Person",
 
       name:
@@ -48,15 +59,11 @@ export default function StructuredData() {
 
       jobTitle:
         "Psicóloga Clínica",
-
     },
 
 
 
-
-
     address: {
-
       "@type": "PostalAddress",
 
       streetAddress:
@@ -73,141 +80,89 @@ export default function StructuredData() {
 
       addressCountry:
         "US",
-
     },
 
 
 
-
-
-    contactPoint: {
-
-      "@type": "ContactPoint",
-
-      telephone:
-        "+1-787-000-0000",
-
-      email:
-        "info@cbeipr.com",
-
-      contactType:
-        "customer service",
-
-      areaServed:
-        "PR",
-
-      availableLanguage:
-        "Spanish",
-
-    },
+    email:
+      "info@cbeipr.com",
 
 
 
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
 
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
 
-    openingHoursSpecification: {
+        opens:
+          "08:00",
 
-      "@type":
-        "OpeningHoursSpecification",
-
-      dayOfWeek: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-      ],
-
-      opens:
-        "08:00",
-
-      closes:
-        "17:00",
-
-    },
-
-
+        closes:
+          "17:00",
+      },
+    ],
 
 
 
     hasOfferCatalog: {
-
-      "@type":
-        "OfferCatalog",
+      "@type": "OfferCatalog",
 
       name:
         "Servicios psicológicos",
 
 
-
       itemListElement: [
 
         {
-
-          "@type":
-            "Offer",
+          "@type": "Offer",
 
           itemOffered: {
-
-            "@type":
-              "Service",
+            "@type": "Service",
 
             name:
               "Psicología Clínica",
-
           },
-
         },
 
 
         {
-
-          "@type":
-            "Offer",
+          "@type": "Offer",
 
           itemOffered: {
-
-            "@type":
-              "Service",
+            "@type": "Service",
 
             name:
               "Terapia Individual y Familiar",
-
           },
-
         },
 
 
         {
-
-          "@type":
-            "Offer",
+          "@type": "Offer",
 
           itemOffered: {
-
-            "@type":
-              "Service",
+            "@type": "Service",
 
             name:
               "Evaluaciones Psicológicas",
-
           },
-
         },
 
-
       ],
-
     },
-
 
   };
 
 
-
   return (
-
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
@@ -215,6 +170,5 @@ export default function StructuredData() {
           JSON.stringify(data),
       }}
     />
-
   );
 }

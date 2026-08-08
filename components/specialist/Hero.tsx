@@ -238,10 +238,11 @@ export default function Hero() {
 
             <Image
               src={specialist.image}
-              alt={specialist.name}
+              alt={`${specialist.name}, psicóloga clínica del Centro de Bienestar Éxito e Innovación`}
               width={560}
               height={700}
               priority
+              sizes="(max-width: 768px) 100vw, 560px"
               className="rounded-[28px] object-cover transition duration-500 hover:scale-105"
             />
 

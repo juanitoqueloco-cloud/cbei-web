@@ -70,6 +70,7 @@ export default function Team() {
                   alt={`${specialist.name}, psicóloga clínica del Centro de Bienestar Éxito e Innovación`}
                   width={320}
                   height={320}
+                  sizes="320px"
                   className="object-cover"
                 />
 

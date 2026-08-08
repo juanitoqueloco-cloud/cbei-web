@@ -10,6 +10,7 @@ export default function Logo() {
         width={80}
         height={80}
         priority
+        sizes="80px"
       />
 
 

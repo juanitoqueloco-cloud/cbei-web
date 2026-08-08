@@ -20,7 +20,11 @@ export const metadata: Metadata = {
   description:
     "Centro de Bienestar Éxito e Innovación ofrece servicios de psicología clínica, terapia emocional, evaluaciones psicológicas y acompañamiento profesional.",
 
-
+icons: {
+  icon: "/icon.png",
+  shortcut: "/icon.png",
+  apple: "/icon.png",
+},
 
   keywords: [
     "psicología clínica",
@@ -83,7 +87,7 @@ export const metadata: Metadata = {
     images: [
       {
         url:
-          "/logo/logo-3-final.webp",
+          "/og-image.png",
 
         width:
           1200,
@@ -123,7 +127,7 @@ export const metadata: Metadata = {
 
 
     images: [
-      "/logo/logo-3-final.webp",
+      "/og-image.png",
     ],
 
   },
