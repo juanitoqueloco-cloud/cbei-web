@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
+    id: "/",
+
     name: "Centro de Bienestar Éxito e Innovación",
 
     short_name: "CBEI",
@@ -9,9 +11,13 @@ export default function manifest(): MetadataRoute.Manifest {
     description:
       "Servicios de psicología clínica, bienestar emocional y acompañamiento profesional.",
 
+    lang: "es",
+
     start_url: "/",
 
     display: "standalone",
+
+    orientation: "portrait",
 
     background_color: "#ffffff",
 
