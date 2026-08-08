@@ -2,19 +2,27 @@ export default function StructuredData() {
   const data = {
     "@context": "https://schema.org",
 
-    "@type": "ProfessionalService",
+    "@type": [
+      "ProfessionalService",
+      "LocalBusiness",
+    ],
+
 
     name:
       "Centro de Bienestar Éxito e Innovación",
 
+
     url:
       "https://www.cbeipr.com",
+
 
     image:
       "https://www.cbeipr.com/logo/logo-3-final.webp",
 
+
     description:
       "Servicios de psicología clínica, terapia emocional, evaluaciones psicológicas y acompañamiento profesional.",
+
 
 
     areaServed: {
@@ -23,11 +31,16 @@ export default function StructuredData() {
     },
 
 
+
     serviceType:
       "Psicología Clínica",
 
 
+
+
+
     founder: {
+
       "@type": "Person",
 
       name:
@@ -35,10 +48,15 @@ export default function StructuredData() {
 
       jobTitle:
         "Psicóloga Clínica",
+
     },
 
 
+
+
+
     address: {
+
       "@type": "PostalAddress",
 
       streetAddress:
@@ -55,73 +73,148 @@ export default function StructuredData() {
 
       addressCountry:
         "US",
+
     },
 
 
+
+
+
     contactPoint: {
+
       "@type": "ContactPoint",
 
-      contactType:
-        "customer service",
+      telephone:
+        "+1-787-000-0000",
 
       email:
         "info@cbeipr.com",
 
+      contactType:
+        "customer service",
+
       areaServed:
         "PR",
+
+      availableLanguage:
+        "Spanish",
+
     },
 
 
+
+
+
+    openingHoursSpecification: {
+
+      "@type":
+        "OpeningHoursSpecification",
+
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+
+      opens:
+        "08:00",
+
+      closes:
+        "17:00",
+
+    },
+
+
+
+
+
     hasOfferCatalog: {
-      "@type": "OfferCatalog",
+
+      "@type":
+        "OfferCatalog",
 
       name:
         "Servicios psicológicos",
 
+
+
       itemListElement: [
+
         {
-          "@type": "Offer",
+
+          "@type":
+            "Offer",
 
           itemOffered: {
-            "@type": "Service",
+
+            "@type":
+              "Service",
 
             name:
               "Psicología Clínica",
+
           },
+
         },
 
+
         {
-          "@type": "Offer",
+
+          "@type":
+            "Offer",
 
           itemOffered: {
-            "@type": "Service",
+
+            "@type":
+              "Service",
 
             name:
               "Terapia Individual y Familiar",
+
           },
+
         },
 
+
         {
-          "@type": "Offer",
+
+          "@type":
+            "Offer",
 
           itemOffered: {
-            "@type": "Service",
+
+            "@type":
+              "Service",
 
             name:
               "Evaluaciones Psicológicas",
+
           },
+
         },
+
+
       ],
+
     },
+
+
   };
 
 
+
   return (
+
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(data),
+        __html:
+          JSON.stringify(data),
       }}
     />
+
   );
 }
