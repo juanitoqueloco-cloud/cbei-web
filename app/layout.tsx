@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+
 import "./globals.css";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -9,13 +11,15 @@ const geistSans = Geist({
 
 
 
-
 export const metadata: Metadata = {
+
   title:
     "Centro de Bienestar Éxito e Innovación | Psicología Clínica",
 
+
   description:
     "Centro de Bienestar Éxito e Innovación ofrece servicios de psicología clínica, terapia emocional, evaluaciones psicológicas y acompañamiento profesional.",
+
 
   keywords: [
     "psicología clínica",
@@ -26,86 +30,127 @@ export const metadata: Metadata = {
     "terapia familiar",
   ],
 
+
   authors: [
     {
-      name: "Centro de Bienestar Éxito e Innovación",
+      name:
+        "Centro de Bienestar Éxito e Innovación",
     },
   ],
+
 
   creator:
     "Centro de Bienestar Éxito e Innovación",
 
-  metadataBase: new URL(
-    "https://www.cbeipr.com"
-  ),
+
+  metadataBase:
+    new URL("https://www.cbeipr.com"),
+
+
 
   openGraph: {
+
     title:
       "Centro de Bienestar Éxito e Innovación",
+
 
     description:
       "Un espacio profesional para fortalecer tu bienestar emocional.",
 
+
     url:
       "https://www.cbeipr.com",
 
+
     siteName:
       "CBEI",
+
 
     images: [
       {
         url:
           "/logo/logo-3-final.webp",
-        width: 1200,
-        height: 630,
+
+        width:
+          1200,
+
+        height:
+          630,
 
         alt:
           "Centro de Bienestar Éxito e Innovación",
       },
     ],
 
+
     locale:
       "es_PR",
 
+
     type:
       "website",
+
   },
 
+
+
   twitter: {
+
     card:
       "summary_large_image",
+
 
     title:
       "Centro de Bienestar Éxito e Innovación",
 
+
     description:
       "Psicología clínica y bienestar emocional.",
 
-    images:
-      ["/logo/logo-3-final.webp"],
+
+    images: [
+      "/logo/logo-3-final.webp",
+    ],
+
   },
 
+
+
   robots: {
-    index: true,
-    follow: true,
+
+    index:
+      true,
+
+    follow:
+      true,
+
   },
+
 };
+
+
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
+
     <html
-  lang="es"
-  className={`${geistSans.variable} h-full antialiased`}
->
+      lang="es"
+      className={geistSans.variable}
+    >
 
+      <body className="min-h-screen flex flex-col antialiased">
 
-      <body className="min-h-full flex flex-col">
         {children}
+
       </body>
+
     </html>
+
   );
+
 }
