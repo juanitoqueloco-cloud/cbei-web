@@ -21,14 +21,19 @@ export const metadata: Metadata = {
     "Centro de Bienestar Éxito e Innovación ofrece servicios de psicología clínica, terapia emocional, evaluaciones psicológicas y acompañamiento profesional.",
 
 
+
   keywords: [
     "psicología clínica",
     "terapia psicológica",
     "salud emocional",
     "bienestar emocional",
     "psicólogo Puerto Rico",
+    "psicología clínica Ponce",
+    "psicóloga clínica Ponce",
     "terapia familiar",
+    "salud mental Ponce",
   ],
+
 
 
   authors: [
@@ -39,12 +44,21 @@ export const metadata: Metadata = {
   ],
 
 
+
   creator:
     "Centro de Bienestar Éxito e Innovación",
 
 
+
   metadataBase:
     new URL("https://www.cbeipr.com"),
+
+
+
+  alternates: {
+    canonical:
+      "https://www.cbeipr.com",
+  },
 
 
 
@@ -135,6 +149,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
 
   return (
 
